@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<div class="col-md-6">
+    {% for sugerencia in sugerencias %}
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="activity_box activity_box1" style="background:#0099df;">
+                        <h3 style="color:white;">{{ sugerencia.titulo }}</h3>
+                        <div class="col_1">
+                        <div class="col-md-12">
+                            <div>
+                            {{ sugerencia.contenido }}         
+                            </div>
+                         </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <b>Autor:</b> {{ sugerencia.autor|raw }} - {{ sugerencia.fecha|date("m/d/Y") }}<br>
+                </div>
+            </div>
+        </div>
+    <hr class="featurette-divider" style="border-color: #dbdbdb;border-width: 1px;">                      
+    {% else %}
+    <div class="well">{{ 'Error'|trans }}</div>
+    {% endfor %}
+</div>
+{% endblock %}

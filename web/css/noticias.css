@@ -1,0 +1,116 @@
+
+/* 'Formulario_noticia.html.twig' */
+
+#formulario form 
+{
+   font-family: Georgia, Times, "Times New Roman", serif;
+   font-size: 17;
+   width: 180px; 
+   margin-top: 3px; 
+   display: inline-block;
+   padding: 3px; 
+   padding-bottom: 3px;
+}
+
+
+#formulario input:focus{
+    background: #fff; 
+    border: 1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-right: 8px;
+  
+}
+
+#formulario input{ 
+    border: 1px solid #aaa; 
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset; 
+    border-radius: 2px; padding-right: 40px; 
+    -moz-transition: padding .25s; 
+    -webkit-transition: padding .25s; 
+    -o-transition: padding .25s; 
+    transition: padding .25s;  
+}
+
+#formulario
+{
+    background: #F5F5F5;
+    width: 90%;
+    list-style-type: none; 
+    list-style-position: inside; 
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+#formulario form div.enviar input
+{
+    background: #000; 
+    border: 1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-right: 60px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 9px 26px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+#formulario form div.inputs div.area div
+{
+    align-content: right;
+    float: right;
+    margin-right: 23px;
+}
+
+/* 'public/index.html.twig' */
+
+#noti_inicio
+{
+    width: 70%;
+    background: #E5E5E5;
+    margin-right: 800px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#noti_inicio a:link, a:visited 
+{
+    background-color: white;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;	
+    text-decoration: none;
+    display: table;
+    margin-left: 0px;
+}
+
+#noti_inicio a:hover, a:active 
+{
+    background-color: #5eb5e0
+}
+
+#noti_inicio div
+{
+  font-family: Tahoma, Arial, sans-serif;
+  color: black;
+  font-size: 15px;  
+  margin-left: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-right: 30px;
+}
+
+/* noticias_table.html */
+
+#barra
+{
+    margin-left: 100px;
+    margin-bottom: 300px;
+    margin-top: 50px;
+ }

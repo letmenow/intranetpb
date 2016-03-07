@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div id="formulario">
+            <form action="{{ path('crear_noticia') }}" method="post" {{ form_enctype(form) }}>
+                <div>
+                {{ form_label(form.titulo)}}
+                {{ form_widget(form.titulo)}}
+                </div>
+                <div>
+                {{ form_label(form.resumen)}}
+                {{ form_widget(form.resumen)}}    
+                </div>
+                <div>
+                {{ form_label(form.autor)}}
+                {{ form_widget(form.autor)}}    
+                </div>
+                <div style="width: 250%;">
+                 {{ form_label(form.contenido)}}   
+                <textarea name="editor1"{{ form_widget(form.contenido) }}</textarea>
+                <script>CKEDITOR.replace('editor1');</script>   
+                </div>
+                <div>
+                {{ form_label(form.fecha)}}
+                {{ form_widget(form.fecha)}}    
+                </div>
+                <br>
+                    <div class="enviar">
+                    <input type="submit" />
+                    </div>
+            </form>
+            </div>
+        </div>  
+        <div class="col-lg-3"></div>
+    </div>    
+
+{% endblock %}

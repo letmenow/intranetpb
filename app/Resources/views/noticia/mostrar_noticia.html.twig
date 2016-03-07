@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div class="col-md-6">
+    {% for noticia in noticias %}
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="activity_box activity_box1" style="background:#0099df;">
+                        <h3 style="color:white;">{{ noticia.titulo }}</h3>
+                        <div class="col_1">
+                            <div class="col-md-11" style="">
+                                 <div style="padding-left: 30px;">
+                                    {{ noticia.resumen }}
+                                    <a href="{{ path('ver_noticia', { id: noticia.id}) }}">
+                                        <button class="btn-info" style="margin:5 px;">Leer más</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider" style="border-color: #dbdbdb;border-width: 1px;">                              
+    {% else %}
+    <div class="well">{{ 'Error'|trans }}</div>
+    {% endfor %}
+    </div>
+{% endblock %}
